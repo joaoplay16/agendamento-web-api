@@ -1,0 +1,20 @@
+{
+  "name": "web-scheduling-api",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": false,
+  "author": "Joao Pedro",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "exact": "^0.8.0",
+    "express": "^4.17.1",
+    "mercadopago": "^1.5.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
+  }
+}
