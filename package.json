@@ -11,8 +11,8 @@
     "mercadopago": "^1.5.4"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "devDependencies": {
     "cors": "^2.8.5"

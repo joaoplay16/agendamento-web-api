@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const mercadopago = require("mercadopago")
 const cors = require("cors")
+const autRoute = require("./src/routes/authRoute")
 require("dotenv").config()
 
 //REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel/credentials
@@ -71,6 +72,8 @@ app.post("/process_payment", (req, res) => {
       res.json(error)
     })
 })
+
+app.use('/', autRoute)
 
 app.listen(process.env.PORT || 8088, () => {
   console.log("The server is now running on Port 8088")
