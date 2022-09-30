@@ -17,7 +17,10 @@ function getToken(uid, response) {
       response.json({ token: token })
     })
     .catch((error) => {
-      response.status(500).json({ error: "Error during token creation" })
+      response.status(500).json({ 
+        error_code: "token_creation_error",
+        error_message: "Error during token creation" 
+      })
     })
 
   return result
@@ -30,7 +33,10 @@ module.exports = {
         getToken(user.uid, res)
       })
       .catch((error) => {
-        res.status(401).json({ error: "Invalid login or password" })
+        res.status(401).json({ 
+          error_code: "invalid_credentials",
+          error_message: "Invalid login or password" 
+        })
       })
   },
 
@@ -38,11 +44,16 @@ module.exports = {
     const { token } = req.body.data
     signInWithCustomToken(auth, token)
     .then(async (result) => {
-      res.status(200).send("OK")
+      res.status(200).json({
+        result: "Login successful"
+      })
     })
     .catch((error) => {
       console.log("ERRO LOGIN", error);
-      res.status(401).json({ error: "Invalid login token"})
+      res.status(401).json({ 
+        error_code: "invalid_token",
+        error_message: "Invalid login token"
+      })
     })
   },
 
