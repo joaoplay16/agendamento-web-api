@@ -14,7 +14,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --coverage --no-cache",
+    "test:watch": "test -- --watch"
   },
   "devDependencies": {
     "chai": "^4.3.7",
