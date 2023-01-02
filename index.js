@@ -78,3 +78,5 @@ app.use('/', autRoute)
 app.listen(process.env.PORT || 8088, () => {
   console.log("The server is now running on Port 8088")
 })
+
+module.exports = app
