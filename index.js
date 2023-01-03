@@ -11,11 +11,6 @@ mercadopago.configurations.setAccessToken(process.env.MP_ACCESS_TOKEN)
 app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-app.use(express.static("./build"))
-
-app.get("*", function (req, res) {
-  res.status(200).sendFile(__dirname + "/build/index.html")
-})
 
 app.post("/process_payment", (req, res) => {
   const { body } = req
