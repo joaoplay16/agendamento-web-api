@@ -70,8 +70,10 @@ app.post("/process_payment", (req, res) => {
 
 app.use('/', autRoute)
 
-app.listen(process.env.PORT || 8088, () => {
-  console.log("The server is now running on Port 8088")
+const PORT = process.env.PORT || 8088
+
+app.listen(PORT, () => {
+  console.log(`The server is now running on Port ${PORT}`)
 })
 
 module.exports = app
