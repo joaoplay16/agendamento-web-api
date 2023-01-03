@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "cross-env NODE_ENV=test jest --coverage --no-cache",
+    "test": "cross-env NODE_ENV=test PORT=8087 jest --coverage --no-cache",
     "test:watch": "test -- --watch"
   },
   "devDependencies": {
