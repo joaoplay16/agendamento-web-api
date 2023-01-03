@@ -16,7 +16,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "cross-env NODE_ENV=test PORT=8087 jest --coverage --no-cache",
-    "test:watch": "test -- --watch"
+    "test:watch": "jest test --watch"
   },
   "devDependencies": {
     "chai": "^4.3.7",
