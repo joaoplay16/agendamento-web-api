@@ -5,4 +5,4 @@ RUN npm install
 COPY . .
 ENV NODE_ENV=production
 EXPOSE 8088
-CMD [ "node", "server.js" ]
+CMD [ "node", "index.js" ]
