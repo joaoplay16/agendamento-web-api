@@ -11,7 +11,7 @@ services:
     volumes: 
       - .:/usr/src/app
     working_dir: /usr/src/app
-    command: yarn start
+    command: npm run dev
     logging: 
       driver: "json-file"
       options: 
