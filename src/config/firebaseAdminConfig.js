@@ -1,6 +1,6 @@
 const { initializeApp, cert } = require("firebase-admin/app")
 const { getAuth } = require("firebase-admin/auth")
-var serviceAccount = require("./agendamento-web-ea083-ca46c36dc976.json");
+var serviceAccount = require("./firebaseServiceConfig.json");
 
 const app = initializeApp({
   credential: cert(serviceAccount),
